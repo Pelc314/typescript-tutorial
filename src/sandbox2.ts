@@ -22,3 +22,4 @@ const plus = (a: number, b: number): number => {
 let result = plus(10, 7);
 
 console.log(result);
+console.log(result);
