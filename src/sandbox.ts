@@ -50,4 +50,6 @@ let ninjaTwo: {
     age: number,
     belt: string
 };
-ninjaTwo = { name: 'Grzes', age: 2, belt: 'black' };
+ninjaTwo = { name: 'Grzes', age: 2, belt: 'black' }; 
+
+console.log('test');
