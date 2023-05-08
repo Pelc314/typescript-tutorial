@@ -1,5 +1,5 @@
 // arrow functions
-let greet = () => {
+let sayHello = () => {
     console.log('hello, world');
 }
 
@@ -15,11 +15,12 @@ const add = (a: number, b: number, c?: number, d: string = '10') => {
 
 add(5, 10);
 
-const plus = (a: number, b: number): number => {
+const addition = (a: number, b: number): number => {
     return a + b;
 }
 
-let result = plus(10, 7);
+let result = addition(10, 7);
 
 console.log(result);
 console.log(result);
+
