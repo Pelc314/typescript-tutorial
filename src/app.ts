@@ -1,3 +1,5 @@
+import {Invoice} from './classes/Invoice.js' // you have to import class from another file
+
 const anchor = document.querySelector('a')! // not null asertion
 
 console.log(anchor?.href) // nul safe call to anchor
@@ -23,36 +25,6 @@ form.addEventListener('submit', (e: Event) => {
         amount.valueAsNumber,
     )
 })
-
-// Classes
-
-class Invoice {
-    readonly client: string;
-    public details: string;
-    private amount: number;
-
-    constructor(c: string, d: string, a: number) {
-        this.client = c
-        this.details = d
-        this.amount = a
-    }
-
-    format() {
-        return `${this.client} owes pounds ${this.amount} for ${this.details}`
-    }
-}
-
-// this constructor only works with access modifiers.
-class AnotherInvoice {
-    constructor(
-        readonly client: string,
-        private details: string,
-        public amount: number
-    ) { }
-    format() {
-        return `${this.client} owes pounds ${this.amount} for ${this.details}`
-    }
-}
 
 const invoiceOne = new Invoice('maciek', 'steamdeck', 2000)
 const invoiceTwo = new Invoice('Konrad', 'Pixel', 800)
