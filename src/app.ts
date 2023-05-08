@@ -1,5 +1,27 @@
-import {Invoice} from './classes/Invoice.js' // you have to import class from another file
+import { Invoice } from './classes/Invoice.js' // you have to import class from another file
 
+// interfaces, they're used to ensure that a variable has certain functions and properties
+
+interface IsPerson {
+    name: string
+    age: number
+    speak(a: string): void
+    spend(a: number): number
+}
+
+const me: IsPerson = {
+    name: 'shaun',
+    age: 12,
+    speak: function (text: string) {
+        // speaks
+    },
+    spend: function (money: number) {
+        // spends money
+        return money
+    }
+}
+
+// DOM operations
 const anchor = document.querySelector('a')! // not null asertion
 
 console.log(anchor?.href) // nul safe call to anchor
@@ -36,6 +58,6 @@ invoices.push(invoiceOne)
 invoices.push(invoiceTwo)
 
 console.log(invoiceOne.format())
-console.log(invoiceTwo)
+console.log(invoiceTwo.client)
 console.log(invoiceTwo)
 console.log(invoices)

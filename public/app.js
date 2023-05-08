@@ -1,4 +1,16 @@
 import { Invoice } from './classes/Invoice.js'; // you have to import class from another file
+const me = {
+    name: 'shaun',
+    age: 12,
+    speak: function (text) {
+        // speaks
+    },
+    spend: function (money) {
+        // spends money
+        return money;
+    }
+};
+// DOM operations
 const anchor = document.querySelector('a'); // not null asertion
 console.log(anchor === null || anchor === void 0 ? void 0 : anchor.href); // nul safe call to anchor
 // const form = document.querySelector('form')
@@ -20,6 +32,6 @@ let invoices = [];
 invoices.push(invoiceOne);
 invoices.push(invoiceTwo);
 console.log(invoiceOne.format());
-console.log(invoiceTwo);
+console.log(invoiceTwo.client);
 console.log(invoiceTwo);
 console.log(invoices);
