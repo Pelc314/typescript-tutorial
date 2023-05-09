@@ -6,7 +6,7 @@ export class Invoice {
         this.amount = a;
     }
     format() {
-        return `${this.client} owes pounds ${this.amount} for ${this.details}`;
+        return `${this.client} owes ${this.amount} pounds for ${this.details}`;
     }
 }
 // this constructor only works with access modifiers.

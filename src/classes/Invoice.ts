@@ -14,7 +14,7 @@ export class Invoice implements HasFormatter { // export allows the class to be 
     }
 
     format() {
-        return `${this.client} owes pounds ${this.amount} for ${this.details}`
+        return `${this.client} owes ${this.amount} pounds for ${this.details}`
     }
 }
 
