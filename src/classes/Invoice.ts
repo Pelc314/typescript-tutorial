@@ -1,6 +1,8 @@
+import { HasFormatter } from "../interfaces/HasFormatter";
+
 // Classes
 
-export class Invoice { // export allows the class to be used in a different file
+export class Invoice implements HasFormatter { // export allows the class to be used in a different file, implements uses the imported interface
     readonly client: string;
     public details: string;
     private amount: number;

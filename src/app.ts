@@ -1,6 +1,6 @@
 import { Invoice } from './classes/Invoice.js' // you have to import class from another file
-
-// interfaces, they're used to ensure that a variable has certain functions and properties
+import { Payment } from './classes/Payment'
+import { HasFormatter } from './interfaces/HasFormatter'
 
 interface IsPerson {
     name: string
@@ -8,6 +8,17 @@ interface IsPerson {
     speak(a: string): void
     spend(a: number): number
 }
+
+let docOne: HasFormatter // this variable must implement that interface
+let docTwo: HasFormatter
+
+docOne = new Invoice('yoshi', 'web work', 250) // here it can be created even when that variable implements HasFormatter because invoice class implements also HasFormatter
+docTwo = new Payment('mario', 'plumbing', 500)
+
+let docs: HasFormatter[] = []
+docs.push(docOne)
+docs.push(docTwo)
+// docs.push('lol') you cannot add string when it doesn't implement HasFormatter
 
 const me: IsPerson = {
     name: 'shaun',
@@ -61,3 +72,5 @@ console.log(invoiceOne.format())
 console.log(invoiceTwo.client)
 console.log(invoiceTwo)
 console.log(invoices)
+console.log(window.Error)
+

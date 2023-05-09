@@ -1,4 +1,13 @@
 import { Invoice } from './classes/Invoice.js'; // you have to import class from another file
+import { Payment } from './classes/Payment';
+let docOne; // this variable must implement that interface
+let docTwo;
+docOne = new Invoice('yoshi', 'web work', 250); // here it can be created even when that variable implements HasFormatter because invoice class implements also HasFormatter
+docTwo = new Payment('mario', 'plumbing', 500);
+let docs = [];
+docs.push(docOne);
+docs.push(docTwo);
+// docs.push('lol') you cannot add string when it doesn't implement HasFormatter
 const me = {
     name: 'shaun',
     age: 12,
@@ -35,3 +44,4 @@ console.log(invoiceOne.format());
 console.log(invoiceTwo.client);
 console.log(invoiceTwo);
 console.log(invoices);
+console.log(window.Error);
