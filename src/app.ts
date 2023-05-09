@@ -85,9 +85,31 @@ let invoices: Invoice[] = []
 invoices.push(invoiceOne)
 invoices.push(invoiceTwo)
 
-console.log(invoiceOne.format())
-console.log(invoiceTwo.client)
-console.log(invoiceTwo)
-console.log(invoices)
-console.log(window.Error)
+// console.log(invoiceOne.format())
+// console.log(invoiceTwo.client)
+// console.log(invoiceTwo)
+// console.log(invoices)
+// console.log(window.Error)
+
+// ENUMS
+
+enum ResourceType {
+    BOOK,
+    AUTHOR,
+    FILM,
+    DIRECTOR,
+    PERSON
+}
+
+interface Resource<T> {
+    uid: number
+    resourceType: ResourceType
+    data: T
+}
+
+const firstRecource: Resource<object> = {
+    uid: 10,
+    resourceType: ResourceType.BOOK,
+    data: { name: ' mario' }
+}
 

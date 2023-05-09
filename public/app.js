@@ -58,8 +58,22 @@ const invoiceTwo = new Invoice('Konrad', 'Pixel', 800);
 let invoices = [];
 invoices.push(invoiceOne);
 invoices.push(invoiceTwo);
-console.log(invoiceOne.format());
-console.log(invoiceTwo.client);
-console.log(invoiceTwo);
-console.log(invoices);
-console.log(window.Error);
+// console.log(invoiceOne.format())
+// console.log(invoiceTwo.client)
+// console.log(invoiceTwo)
+// console.log(invoices)
+// console.log(window.Error)
+// ENUMS
+var ResourceType;
+(function (ResourceType) {
+    ResourceType[ResourceType["BOOK"] = 0] = "BOOK";
+    ResourceType[ResourceType["AUTHOR"] = 1] = "AUTHOR";
+    ResourceType[ResourceType["FILM"] = 2] = "FILM";
+    ResourceType[ResourceType["DIRECTOR"] = 3] = "DIRECTOR";
+    ResourceType[ResourceType["PERSON"] = 4] = "PERSON";
+})(ResourceType || (ResourceType = {}));
+const firstRecource = {
+    uid: 10,
+    resourceType: ResourceType.BOOK,
+    data: { name: ' mario' }
+};
